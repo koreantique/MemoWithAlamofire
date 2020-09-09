@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="02u-Bk-PUi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--프로필-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoWithAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="프로필" id="vaU-eB-PIj">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="UbT-dg-x4f">
+                            <connections>
+                                <segue destination="G5E-Nc-mNT" kind="show" id="IUi-eA-kXb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--신규 계정 등록-->
+        <scene sceneID="hkh-U5-6LK">
+            <objects>
+                <viewController id="G5E-Nc-mNT" customClass="JoinViewController" customModule="MemoWithAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="otD-s7-guo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-GK-dh6">
+                                <rect key="frame" x="10" y="98.5" width="90" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="6aF-Sg-MAk"/>
+                                    <constraint firstAttribute="height" constant="90" id="evN-Tn-jGF"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41z-cw-h9l">
+                                <rect key="frame" x="110" y="98" width="294" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vpt-CP-0kN"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="60f-Zi-31u">
+                                        <rect key="frame" x="0.0" y="28" width="294" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="60f-Zi-31u" id="f0h-Iz-8K4">
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b6b-GK-dh6" firstAttribute="top" secondItem="arg-Po-Ukl" secondAttribute="top" constant="10" id="1Td-hC-7Mi"/>
+                            <constraint firstItem="41z-cw-h9l" firstAttribute="top" secondItem="arg-Po-Ukl" secondAttribute="top" constant="10" id="Lvj-gp-3eL"/>
+                            <constraint firstItem="41z-cw-h9l" firstAttribute="leading" secondItem="b6b-GK-dh6" secondAttribute="trailing" constant="10" id="NNj-QW-AeO"/>
+                            <constraint firstItem="arg-Po-Ukl" firstAttribute="trailing" secondItem="41z-cw-h9l" secondAttribute="trailing" constant="10" id="hQL-dm-X4i"/>
+                            <constraint firstItem="b6b-GK-dh6" firstAttribute="leading" secondItem="arg-Po-Ukl" secondAttribute="leading" constant="10" id="wUb-ZY-nYI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="arg-Po-Ukl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="신규 계정 등록" id="Tm5-bb-MX4"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="b6b-GK-dh6" id="i1v-V3-XiK"/>
+                        <outlet property="tableView" destination="41z-cw-h9l" id="J1B-HK-Mh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSF-oT-9Zj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UBj-7d-eVX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="02u-Bk-PUi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LKz-Pl-oEi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UDy-pn-g7D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63q-5o-g1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
